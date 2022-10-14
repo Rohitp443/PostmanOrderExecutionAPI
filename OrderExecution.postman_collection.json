@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "1f514602-3191-4865-ac88-18c789bdf63c",
+		"name": "OrderExecution",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23597711"
+	},
+	"item": [
+		{
+			"name": "MyFolder",
+			"item": [
+				{
+					"name": "MyRequest",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.log(\"This is a Request level Pre-Request Script...\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"This is a Request level Test Script...\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reqres.in//api/users/2",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"",
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"This is a Folder level Pre-Request Script...\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"This is a Folder level Test Script...\");"
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log(\"This is a Collection level Pre-Request Script...\");"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log(\"This is a Collection level Test Script...\");",
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	]
+}
