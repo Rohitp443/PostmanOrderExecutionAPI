@@ -90,8 +90,8 @@
 				"type": "text/javascript",
 				"exec": [
 					"console.log(\"This is a Collection level Test Script...\");",
-					"pm.test(\"Status code is 200\", function () {",
-					"    pm.response.to.have.status(200);",
+					"pm.test(\"Status code is 404\", function () {",
+					"    pm.response.to.have.status(404);",
 					"});"
 				]
 			}
